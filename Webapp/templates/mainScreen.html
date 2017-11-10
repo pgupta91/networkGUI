@@ -1,0 +1,50 @@
+<!doctype html>
+<h1>Connected Nodes in the Network:</h1>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+</head>
+<fieldset id="group1">
+<form method="POST" action="/editNode.html">
+    <table style ="width: 100%">
+    <tr>
+        <th>Command</th>
+        <th>Device Type</th>
+        <th>Error Codes</th>
+        <th>GPIO Table</th>
+        <th>DAC1</th>
+        <th>Radio Control</th>
+        <th>Local Time</th>
+        <th>LED1</th>
+        <th>LED2</th>
+        <th>LED3</th>
+        <th>LED4</th>
+        <th>Buzzer</th>
+        <th>Select Node</th>
+    </tr>
+        {% for x in range(0,itemCount) %}
+        <tr>
+            <td>{{ command[x] }}</td>
+            <td>{{ deviceType[x] }}</td>
+            <td>{{ errorCodes[x] }}</td>
+            <td>{{ gpioTable[x] }}</td>
+            <td>{{ DAC1[x] }}</td>
+            <td>{{ radioControl[x] }}</td>
+            <td>{{ localTime[x] }}</td>
+            <td>{{ LED1[x] }}</td>
+            <td>{{ LED2[x] }}</td>
+            <td>{{ LED3[x] }}</td>
+            <td>{{ LED4[x] }}</td>
+            <td>{{ buzzer[x] }}</td>
+            <td><input type="radio" value="" name="group1"></td>
+        </tr>
+        {% endfor %}
+        </table>
+<input type="submit" value="Edit Node">
+<input type="submit" value="Refresh Table">
+</form>
+</fieldset>

@@ -1,0 +1,112 @@
+<!doctype html>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+<form method="POST" action="/editNode">
+<table style ="width: 100%">
+            <tr>
+                <th>Command</th>
+                <th>Device Type</th>
+                <th>Error Codes</th>
+                 <th>GPIO Table</th>
+                <th>DAC1</th>
+                <th>Radio Control</th>
+                <th>Local Time</th>
+                <th>LED1</th>
+                <th>LED2</th>
+                <th>LED3</th>
+                <th>LED4</th>
+                <th>Buzzer</th>
+                <tr>
+                    <td>
+                    <select name = "command" method="GET" action="/">
+                    {% for cmd in commandDict %}
+                        <option value= "{{cmd}}" SELECTED>{{cmd}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "deviceType" method="GET" action="/">
+                    {% for devType in deviceTypeDict %}
+                        <option value= "{{devType}}" SELECTED>{{devType}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "errorCode" method="GET" action="/">
+                    {% for errCode in errorCodesDict %}
+                        <option value= "{{errCode}}" SELECTED>{{errCode}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "gpioTable" method="GET" action="/">
+                    {% for gpio in gpioTableDict %}
+                        <option value= "{{gpio}}" SELECTED>{{gpio}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "dac1" method="GET" action="/">
+                    {% for dac in DAC1Dict %}
+                        <option value= "{{dac}}" SELECTED>{{dac}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "radioControl" method="GET" action="/">
+                    {% for rcControl in radioControlDict %}
+                        <option value= "{{rcControl}}" SELECTED>{{rcControl}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "localTime" method="GET" action="/">
+                    {% for locTime in localTimeDict %}
+                        <option value= "{{locTime}}" SELECTED>{{locTime}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "LED1" method="GET" action="/">
+                    {% for led in ledDict %}
+                        <option value= "{{led}}" SELECTED>{{led}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "LED2" method="GET" action="/">
+                    {% for led in ledDict %}
+                        <option value= "{{led}}" SELECTED>{{led}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "LED3" method="GET" action="/">
+                    {% for led in ledDict %}
+                        <option value= "{{led}}" SELECTED>{{led}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "LED4" method="GET" action="/">
+                    {% for led in ledDict %}
+                        <option value= "{{led}}" SELECTED>{{led}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name = "buzzer" method="GET" action="/">
+                    {% for buzzValue in buzzerDict %}
+                        <option value= "{{buzzValue}}" SELECTED>{{buzzValue}}</option>"
+                    {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+            <input type="submit" value="Submit">
+            </tr>
+</table>
+</form>
